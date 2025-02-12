@@ -1,6 +1,6 @@
 package dev.gir0fa.melongems.gems;
 
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.gir0fa.melongems.listeners.AvoidTargetListener;
 import dev.gir0fa.melongems.managers.SingletonManager;
 import dev.gir0fa.melongems.misc.AbstractClasses.Gem;
@@ -24,7 +24,7 @@ public class LavaGem extends Gem {
     public LavaGem() {
         super("Lava");
     }
-    private final int secondMultiplier = 100; // Don't question it.
+    private final int secondMultiplier = 20; // Don't question it.
 
     private final Utils u = SingletonManager.getInstance().utils;
 
@@ -47,7 +47,7 @@ public class LavaGem extends Gem {
             });
 
             // Set the blocks to air
-            Bukkit.getScheduler().scheduleSyncDelayedTask(PowerGems.getPlugin(), new Runnable() {
+            Bukkit.getScheduler().scheduleSyncDelayedTask(MelonGems.getPlugin(), new Runnable() {
                 @Override
                 public void run() {
                     blocks.forEach(nullBlock -> {

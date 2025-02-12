@@ -1,7 +1,7 @@
 package dev.gir0fa.melongems.listeners;
 
 import de.leonhard.storage.Json;
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.gir0fa.melongems.gems.IronGem;
 import dev.gir0fa.melongems.managers.Configuration.GeneralConfigManager;
 import dev.gir0fa.melongems.managers.GemManager;
@@ -18,7 +18,7 @@ import java.util.UUID;
 
 public class EnterExitListener implements Listener {
 
-    private final Json playerJoined = new Json("playerData", PowerGems.getPlugin().getDataFolder().getPath()+"\\data\\");
+    private final Json playerJoined = new Json("playerData", MelonGems.getPlugin().getDataFolder().getPath()+"\\data\\");
     private final SingletonManager sm = SingletonManager.getInstance();
     private final IronGem ironGem = new IronGem();
     private final GemManager gm = sm.gemManager;

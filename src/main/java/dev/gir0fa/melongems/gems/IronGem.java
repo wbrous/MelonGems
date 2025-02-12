@@ -1,6 +1,6 @@
 package dev.gir0fa.melongems.gems;
 
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.gir0fa.melongems.managers.NamespacedKeyManager;
 import dev.gir0fa.melongems.managers.SingletonManager;
 import dev.gir0fa.melongems.managers.TempDataManager;
@@ -27,15 +27,15 @@ public class IronGem extends Gem {
     public IronGem() {
         super("Iron");
     }
-    private final int secondMultiplier = 100; // Don't question it.
+    private final int secondMultiplier = 20; // Don't question it.
 
     private final TempDataManager tdm = SingletonManager.getInstance().tempDataManager;
     private final NamespacedKeyManager nkm = SingletonManager.getInstance().namespacedKeyManager;
-    private final AttributeModifier armorModifier = new AttributeModifier(PowerGems.getAttributeUUID(),
+    private final AttributeModifier armorModifier = new AttributeModifier(MelonGems.getAttributeUUID(),
             "Iron Fortification", 8, AttributeModifier.Operation.ADD_NUMBER);
-    private final AttributeModifier toughnessModifier = new AttributeModifier(PowerGems.getAttributeUUID(),
+    private final AttributeModifier toughnessModifier = new AttributeModifier(MelonGems.getAttributeUUID(),
             "Iron Fortification", 4, AttributeModifier.Operation.ADD_NUMBER);
-    private final AttributeModifier knockbackAttribute = new AttributeModifier(PowerGems.getAttributeUUID(),
+    private final AttributeModifier knockbackAttribute = new AttributeModifier(MelonGems.getAttributeUUID(),
             "Iron Fortification - Knockback", 5, AttributeModifier.Operation.ADD_NUMBER);
 
     @Override
@@ -56,7 +56,7 @@ public class IronGem extends Gem {
             ExceptionHandler.getInstance().dealWithException(ex, Level.WARNING, "ALREADY_HAS_IRON_MODIFIERS_RIGHT", plr.getName());
         }
         plr.setVelocity(new Vector(0, 0, 0));
-        Bukkit.getScheduler().runTaskLater(PowerGems.getPlugin(), () -> {
+        Bukkit.getScheduler().runTaskLater(MelonGems.getPlugin(), () -> {
             OfflinePlayer op = Bukkit.getOfflinePlayer(plr.getUniqueId());
             if (op.isOnline()) {
                 plr.setAbsorptionAmount(0.0);
@@ -101,7 +101,7 @@ public class IronGem extends Gem {
         } catch (IllegalArgumentException ex) {
             ExceptionHandler.getInstance().dealWithException(ex, Level.WARNING, "ALREADY_HAS_IRON_MODIFIERS_SHIFT", plr.getName());
         }
-        Bukkit.getScheduler().runTaskLater(PowerGems.getPlugin(), () -> {
+        Bukkit.getScheduler().runTaskLater(MelonGems.getPlugin(), () -> {
             OfflinePlayer op = Bukkit.getOfflinePlayer(plr.getUniqueId());
             if (op.isOnline()) {
                 armorAttribute.removeModifier(armorModifier);

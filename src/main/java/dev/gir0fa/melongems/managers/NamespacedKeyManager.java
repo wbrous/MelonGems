@@ -1,6 +1,6 @@
 package dev.gir0fa.melongems.managers;
 
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import org.bukkit.NamespacedKey;
 
 import java.util.HashMap;
@@ -13,7 +13,7 @@ public class NamespacedKeyManager {
         if (namespacedKeyLookupMap.containsKey(name)){
             return;
         }
-        namespacedKeyLookupMap.put(name, NamespacedKey.fromString(name, PowerGems.getPlugin()));
+        namespacedKeyLookupMap.put(name, NamespacedKey.fromString(name, MelonGems.getPlugin()));
     }
 
     public NamespacedKey getKey(String name) {

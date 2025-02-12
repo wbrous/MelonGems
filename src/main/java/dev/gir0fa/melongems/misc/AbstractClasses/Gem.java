@@ -1,6 +1,6 @@
 package dev.gir0fa.melongems.misc.AbstractClasses;
 
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.gir0fa.melongems.managers.Addons.WorldGuard.WorldGuardAddonManager;
 import dev.gir0fa.melongems.managers.Configuration.GemParticleConfigManager;
 import dev.gir0fa.melongems.managers.Configuration.GeneralConfigManager;
@@ -44,7 +44,7 @@ public abstract class Gem {
 
         level = gm.getLevel(item);
         this.plr = plr;
-        if (PowerGems.isWorldGuardEnabled && !WorldGuardAddonManager.getInstance().isGemUsageAllowedInRegion(plr)) {
+        if (MelonGems.isWorldGuardEnabled && !WorldGuardAddonManager.getInstance().isGemUsageAllowedInRegion(plr)) {
             plr.sendMessage(I18N.getTranslation("CANNOT_USE_GEMS_IN_REGION"));
             return;
         }

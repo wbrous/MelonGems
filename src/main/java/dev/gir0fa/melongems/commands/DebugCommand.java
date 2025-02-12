@@ -1,6 +1,6 @@
 package dev.gir0fa.melongems.commands;
 
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.gir0fa.melongems.managers.SingletonManager;
 import dev.iseal.sealLib.Systems.I18N.I18N;
 import dev.iseal.sealLib.Metrics.ConnectionManager;
@@ -73,7 +73,7 @@ public class DebugCommand implements CommandExecutor, TabCompleter {
     public boolean attemptNoPlayer(CommandSender sender, String[] args) {
         this.sender = sender;
         if (args[0].equals("dump")) {
-            ExceptionHandler.getInstance().dumpAllClasses(PowerGems.class);
+            ExceptionHandler.getInstance().dumpAllClasses(MelonGems.class);
             return true;
         }
         return false;

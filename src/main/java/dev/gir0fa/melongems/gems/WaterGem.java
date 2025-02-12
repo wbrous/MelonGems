@@ -1,6 +1,6 @@
 package dev.gir0fa.melongems.gems;
 
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.gir0fa.melongems.misc.AbstractClasses.Gem;
 import org.bukkit.*;
 import org.bukkit.block.Block;
@@ -17,7 +17,6 @@ public class WaterGem extends Gem {
     public WaterGem() {
         super("Water");
     }
-    private final int secondMultiplier = 100; // Don't question it.
 
     @Override
     public void call(Action act, Player plr, ItemStack item) {
@@ -78,10 +77,12 @@ public class WaterGem extends Gem {
                     if (!block.isEmpty())
                         continue;
                     block.setType(Material.WATER);
-                    Bukkit.getScheduler().scheduleSyncDelayedTask(PowerGems.getPlugin(), () -> block.setType(Material.AIR), 400+level* 40L);
+                    Bukkit.getScheduler().scheduleSyncDelayedTask(MelonGems.getPlugin(), () -> block.setType(Material.AIR), 400+level* 40L);
                 }
             }
         }
+        // Don't question it.
+        int secondMultiplier = 20;
         plr.addPotionEffect(new PotionEffect(PotionEffectType.DOLPHINS_GRACE, (30 * (secondMultiplier))+level*100, 2));
     }
 }

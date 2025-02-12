@@ -18,7 +18,7 @@ public class StrengthGem extends Gem {
     public StrengthGem() {
         super("Strength");
     }
-    private final int secondMultiplier = 100; // Don't question it.
+    private final int secondMultiplier = 20; // Don't question it.
 
     @Override
     public void call(Action act, Player plr, ItemStack item) {
@@ -29,6 +29,8 @@ public class StrengthGem extends Gem {
     @Override
     protected void rightClick(Player plr) {
         plr.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 30 * (secondMultiplier), 1));
+        plr.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 30 * (secondMultiplier), 1));
+        plr.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 30 * (secondMultiplier), 1));
     }
 
     @Override

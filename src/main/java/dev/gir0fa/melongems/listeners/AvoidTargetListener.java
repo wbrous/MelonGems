@@ -1,6 +1,6 @@
 package dev.gir0fa.melongems.listeners;
 
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.iseal.sealLib.Systems.I18N.I18N;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
@@ -76,6 +76,6 @@ public class AvoidTargetListener implements Listener {
                     avoidTargetList.get(plr.getUniqueId()).remove();
                 avoidTargetList.remove(plr.getUniqueId());
             }
-        }.runTaskLater(PowerGems.getPlugin(), timeUntilRemoval);
+        }.runTaskLater(MelonGems.getPlugin(), timeUntilRemoval);
     }
 }

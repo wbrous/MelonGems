@@ -1,6 +1,6 @@
 package dev.gir0fa.melongems.managers;
 
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.gir0fa.melongems.misc.AbstractClasses.AbstractConfigManager;
 import dev.gir0fa.melongems.misc.Interfaces.Dumpable;
 import dev.iseal.sealLib.Utils.ExceptionHandler;
@@ -79,7 +79,7 @@ public class ConfigManager implements Dumpable {
     }
 
     public static String getConfigFolderPath(){
-        return PowerGems.getPlugin().getDataFolder() + File.separator + "config" + File.separator;
+        return MelonGems.getPlugin().getDataFolder() + File.separator + "config" + File.separator;
     }
 
     public void resetConfig() {

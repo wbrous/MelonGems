@@ -1,6 +1,6 @@
 package dev.gir0fa.melongems.listeners.passivePowerListeners;
 
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.gir0fa.melongems.gems.powerClasses.tasks.WaterRainingTask;
 import dev.gir0fa.melongems.managers.GemManager;
 import dev.gir0fa.melongems.managers.NamespacedKeyManager;
@@ -22,7 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 public class WaterMoveListener implements Listener {
 
@@ -61,7 +60,7 @@ public class WaterMoveListener implements Listener {
                 .toList());
 
         task = new WaterRainingTask();
-        task.runTaskTimer(PowerGems.getPlugin(), 0, 100);
+        task.runTaskTimer(MelonGems.getPlugin(), 0, 100);
     }
 
     @EventHandler

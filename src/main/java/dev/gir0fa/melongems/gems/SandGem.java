@@ -1,6 +1,6 @@
 package dev.gir0fa.melongems.gems;
 
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.gir0fa.melongems.managers.Configuration.GeneralConfigManager;
 import dev.gir0fa.melongems.managers.SingletonManager;
 import dev.gir0fa.melongems.misc.AbstractClasses.Gem;
@@ -27,7 +27,7 @@ public class SandGem extends Gem {
     public SandGem() {
         super("Sand");
     }
-    private final int secondMultiplier = 100; // Don't question it.
+    private final int secondMultiplier = 20; // Don't question it.
 
     private final Utils utils = SingletonManager.getInstance().utils;
     private final GeneralConfigManager gcm = SingletonManager.getInstance().configManager.getRegisteredConfigInstance(GeneralConfigManager.class);
@@ -141,7 +141,7 @@ public class SandGem extends Gem {
 
         sm.sandMoveListen.addToRemoveList(plr.getUniqueId(), toReplace);
 
-        Bukkit.getScheduler().runTaskLater(PowerGems.getPlugin(), () -> {
+        Bukkit.getScheduler().runTaskLater(MelonGems.getPlugin(), () -> {
             sm.sandMoveListen.removeFromList(plr.getUniqueId());
         }, 50L*level);
     }

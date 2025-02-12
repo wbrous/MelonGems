@@ -35,7 +35,7 @@ import dev.iseal.sealLib.Metrics.MetricsManager;
 import dev.iseal.sealLib.Systems.I18N.I18N;
 import dev.iseal.sealLib.Utils.ExceptionHandler;
 
-public class PowerGems extends JavaPlugin {
+public class MelonGems extends JavaPlugin {
 
     private static JavaPlugin plugin = null;
     public static Yaml config = null;
@@ -138,7 +138,7 @@ public class PowerGems extends JavaPlugin {
             sm.metricsManager = MetricsManager.getInstance();
             l.info(I18N.translate("REGISTERING_METRICS"));
             sm.metricsManager = MetricsManager.getInstance();
-            sm.metricsManager.addMetrics(PowerGems.getPlugin(), 20723);
+            sm.metricsManager.addMetrics(MelonGems.getPlugin(), 20723);
         }
         //pluginManager.registerEvents(sm.metricsManager, this);
         l.info(I18N.translate("INITIALIZED_PLUGIN"));

@@ -26,7 +26,6 @@ public class AirGem extends Gem {
     public AirGem() {
         super("Air");
     }
-    private final int secondMultiplier = 100; // Don't question it.
 
     @Override
     public void call(Action act, Player plr, ItemStack item) {
@@ -88,6 +87,8 @@ public class AirGem extends Gem {
         effect.setRadius(1.0f);
         effect.setParticle(Particle.SMOKE_LARGE);
         effect.setColor(Color.BLACK);
+        // Don't question it.
+        int secondMultiplier = 20;
         plr.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 10 * (secondMultiplier), 0));
         plr.setVelocity(direction.multiply(distance));
     }

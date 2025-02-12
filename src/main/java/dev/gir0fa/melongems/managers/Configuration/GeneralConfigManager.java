@@ -7,19 +7,19 @@ import org.bukkit.Material;
 import org.bukkit.block.Block;
 
 import de.leonhard.storage.Config;
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.gir0fa.melongems.misc.AbstractClasses.AbstractConfigManager;
 
 public class GeneralConfigManager extends AbstractConfigManager {
 
     public GeneralConfigManager() {
         super(null);
-        file = new Config("config", PowerGems.getPlugin().getDataFolder()+"");
+        file = new Config("config", MelonGems.getPlugin().getDataFolder()+"");
     }
 
     public void setUpConfig() {
         // WARNING: Using PowerGems.file is deprecated and should be replaced with a getter in the respective class. I'm just too lazy to do it.
-        PowerGems.config = file;
+        MelonGems.config = file;
         file.setDefault("pluginPrefix", ChatColor.BLACK + "[" + ChatColor.DARK_RED + "PowerGems" + ChatColor.BLACK + "] ");
         file.setDefault("allowOnlyOneGem", false);
         file.setDefault("useNewAllowOnlyOneGemAlgorithm", true);

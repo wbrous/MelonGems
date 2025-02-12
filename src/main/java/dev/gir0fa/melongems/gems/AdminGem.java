@@ -15,7 +15,7 @@ public class AdminGem extends Gem {
     public AdminGem() {
         super("Admin");
     }
-    private final int secondMultiplier = 100; // Don't question it.
+    private final int secondMultiplier = 20; // Don't question it.
 
     @Override
     public void call(Action act, Player plr, ItemStack item) {

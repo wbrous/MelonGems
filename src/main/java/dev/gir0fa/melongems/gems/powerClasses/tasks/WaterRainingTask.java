@@ -23,7 +23,7 @@ public class WaterRainingTask extends BukkitRunnable {
             if (temperature > 0.15 && temperature < 0.95 && canSeeSky) {
                 // it is raining here
                 // Don't question it.
-                int secondMultiplier = 100;
+                int secondMultiplier = 20;
                 plr.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 30 * (secondMultiplier), 0));
             }
         }

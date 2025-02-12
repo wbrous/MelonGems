@@ -1,6 +1,6 @@
 package dev.gir0fa.melongems.gems.powerClasses;
 
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.gir0fa.melongems.managers.SingletonManager;
 import org.bukkit.Location;
 import org.bukkit.Particle;
@@ -49,6 +49,6 @@ public class StrengthArena implements Listener {
                 }
                 currentTime++;
             }
-        }.runTaskTimer(PowerGems.getPlugin(), 0L, 10L);
+        }.runTaskTimer(MelonGems.getPlugin(), 0L, 10L);
     }
 }

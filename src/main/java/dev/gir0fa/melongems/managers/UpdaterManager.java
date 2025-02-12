@@ -1,6 +1,6 @@
 package dev.gir0fa.melongems.managers;
 
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.iseal.sealLib.Systems.I18N.I18N;
 import dev.iseal.sealLib.Updater.UpdateChecker;
 import org.bukkit.Bukkit;
@@ -34,7 +34,7 @@ public class UpdaterManager extends Thread {
      */
     public void run() {
         // check interval is 1hr (20 ticks * 60 seconds * 60 minutes)
-        uc = new UpdateChecker("kCgEfc6s", PowerGems.getPlugin(), "powergems.notify", 20*60*60, this::handleResult, this::handleResult);
+        uc = new UpdateChecker("kCgEfc6s", MelonGems.getPlugin(), "powergems.notify", 20*60*60, this::handleResult, this::handleResult);
         l.info("[PowerGems] "+ I18N.translate("RUNNING_UPDATE_CHECK"));
     }
 

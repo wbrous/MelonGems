@@ -1,7 +1,7 @@
 package dev.gir0fa.melongems.managers;
 
 import de.leonhard.storage.Yaml;
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.gir0fa.melongems.managers.Configuration.GeneralConfigManager;
 import dev.iseal.sealLib.Systems.I18N.I18N;
 import dev.iseal.sealLib.Utils.ExceptionHandler;
@@ -30,7 +30,7 @@ import java.util.logging.Logger;
 public class RecipeManager implements Listener {
 
     private GemManager gemManager = null;
-    private final Yaml recipes = new Yaml("recipes", PowerGems.getPlugin().getDataFolder() + "\\config\\");
+    private final Yaml recipes = new Yaml("recipes", MelonGems.getPlugin().getDataFolder() + "\\config\\");
     private GeneralConfigManager gcm = null;
     private NamespacedKeyManager nkm = null;
     private final Logger l = Bukkit.getLogger();
@@ -84,7 +84,7 @@ public class RecipeManager implements Listener {
     }
 
     private void tryUpgradeCrafting(InventoryClickEvent e) {
-        Bukkit.getScheduler().scheduleSyncDelayedTask(PowerGems.getPlugin(), () -> {
+        Bukkit.getScheduler().scheduleSyncDelayedTask(MelonGems.getPlugin(), () -> {
             CraftingInventory ci = (CraftingInventory) e.getInventory();
             if (!Objects.equals(ci.getResult(), null))
                 return;
@@ -213,7 +213,7 @@ public class RecipeManager implements Listener {
     private void craftRecipe() {
         try {
             String key = "gem_craft_recipe";
-            NamespacedKey nk = new NamespacedKey(PowerGems.getPlugin(), key);
+            NamespacedKey nk = new NamespacedKey(MelonGems.getPlugin(), key);
             ShapedRecipe sr = new ShapedRecipe(nk, SingletonManager.getInstance().gemManager.getRandomGemItem());
             HashMap<String, Object> arr = (HashMap<String, Object>) recipes.getMap("gem_craft_recipe");
 
@@ -268,7 +268,7 @@ public class RecipeManager implements Listener {
                     newStack.setItemMeta(im);
                     // generate namespacedkey based on name+level
                     key = gemManager.getGemName(newStack).toLowerCase()  + "_" + level + "_upgrade";
-                    NamespacedKey nk = new NamespacedKey(PowerGems.getPlugin(), key);
+                    NamespacedKey nk = new NamespacedKey(MelonGems.getPlugin(), key);
                     ShapedRecipe sr = new ShapedRecipe(nk, newStack);
                     HashMap<String, Object> arr = (HashMap<String, Object>) recipes.getMap(key);
 

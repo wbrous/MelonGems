@@ -1,6 +1,6 @@
 package dev.gir0fa.melongems.misc.AbstractClasses;
 
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.gir0fa.melongems.managers.GemManager;
 import dev.gir0fa.melongems.managers.NamespacedKeyManager;
 import dev.gir0fa.melongems.managers.SingletonManager;
@@ -57,7 +57,7 @@ public abstract class GemSpecificListener implements Listener {
             public void run() {
                 activePlayers.remove(plr.getUniqueId());
             }
-        }.runTaskLater(PowerGems.getPlugin(), effectLength);
+        }.runTaskLater(MelonGems.getPlugin(), effectLength);
     }
 
     /*

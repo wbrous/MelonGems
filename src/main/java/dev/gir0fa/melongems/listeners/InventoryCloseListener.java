@@ -1,6 +1,6 @@
 package dev.gir0fa.melongems.listeners;
 
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.gir0fa.melongems.managers.GemManager;
 import dev.gir0fa.melongems.managers.SingletonManager;
 import org.bukkit.Location;
@@ -46,7 +46,7 @@ public class InventoryCloseListener implements Listener {
             nOfGems += item.getAmount();
             pi.setItem(intAt, null);
         }
-        if (PowerGems.config.getBoolean("allowOnlyOneGem")) {
+        if (MelonGems.config.getBoolean("allowOnlyOneGem")) {
             if (pi.firstEmpty() == -1)
                 plr.getWorld().dropItem(plr.getLocation(), gm.createGem());
             else
@@ -66,7 +66,7 @@ public class InventoryCloseListener implements Listener {
 
     @Deprecated(since = "3.3.1.0", forRemoval = true)
     private void checkIfMultipleGems(Player plr) {
-        if (!PowerGems.config.getBoolean("allowOnlyOneGem")) {
+        if (!MelonGems.config.getBoolean("allowOnlyOneGem")) {
             return;
         }
         HashMap<ItemStack, Integer> gems = new HashMap<>(3);

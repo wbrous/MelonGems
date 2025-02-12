@@ -1,6 +1,6 @@
 package dev.gir0fa.melongems.misc;
 
-import dev.gir0fa.melongems.PowerGems;
+import dev.gir0fa.melongems.MelonGems;
 import dev.gir0fa.melongems.managers.GemManager;
 import dev.gir0fa.melongems.managers.SingletonManager;
 import dev.gir0fa.melongems.tasks.SpawnColoredLineTask;
@@ -175,7 +175,7 @@ public class Utils {
         task.spawnCircles = true;
         task.repeatAmount = repeatAmount;
         task.init();
-        task.runTaskTimer(PowerGems.getPlugin(), 0, 1);
+        task.runTaskTimer(MelonGems.getPlugin(), 0, 1);
     }
 
     public void spawnLineParticles(Location start, Location target, int red, int green, int blue, double interval, Consumer<Location> consumer, int repeatAmount) {
@@ -191,7 +191,7 @@ public class Utils {
         task.spawnCircles = false;
         task.repeatAmount = repeatAmount;
         task.init();
-        task.runTaskTimer(PowerGems.getPlugin(), 0, 1);
+        task.runTaskTimer(MelonGems.getPlugin(), 0, 1);
     }
 
     /*

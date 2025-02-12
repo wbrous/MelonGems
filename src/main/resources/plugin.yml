@@ -1,6 +1,6 @@
 name: MelonGems
 version: '${project.version}'
-main: dev.gir0fa.melongems.PowerGems
+main: dev.gir0fa.melongems.MelonGems
 api-version: '1.19'
 author: Gir0fa
 load: STARTUP
