@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dev.iseal</groupId>
-    <artifactId>PowerGems</artifactId>
-    <version>3.6.0.3</version>
+    <groupId>dev.gir0fa</groupId>
+    <artifactId>MelonGems</artifactId>
+    <version>3.6.0.3.beta.1</version>
     <packaging>jar</packaging>
 
     <name>PowerGems</name>
@@ -52,7 +52,7 @@
                             <relocations>
                                 <relocation>
                                     <pattern>com.jeff_media.updatechecker</pattern>
-                                    <shadedPattern>dev.iseal.powergems.misc.updatechecker</shadedPattern>
+                                    <shadedPattern>dev.gir0fa.melongems.misc.updatechecker</shadedPattern>
                                 </relocation>
                             </relocations>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
