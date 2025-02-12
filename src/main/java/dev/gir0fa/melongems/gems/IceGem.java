@@ -54,9 +54,7 @@ public class IceGem extends Gem {
         }
 
         ent.setFreezeTicks(100 + (level * 2) * 20);
-        // Don't question it.
-        int secondMultiplier = 20;
-        ent.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, (10 * (secondMultiplier)) + (level * 2) * 20, level - 1));
+        ent.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100 + (level * 2) * 20, level - 1));
     }
 
     @Override

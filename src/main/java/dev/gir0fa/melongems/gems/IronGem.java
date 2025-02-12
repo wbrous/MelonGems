@@ -27,7 +27,6 @@ public class IronGem extends Gem {
     public IronGem() {
         super("Iron");
     }
-    private final int secondMultiplier = 20; // Don't question it.
 
     private final TempDataManager tdm = SingletonManager.getInstance().tempDataManager;
     private final NamespacedKeyManager nkm = SingletonManager.getInstance().namespacedKeyManager;

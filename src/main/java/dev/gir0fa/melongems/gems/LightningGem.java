@@ -59,7 +59,7 @@ public class LightningGem extends Gem {
         for (Entity e : world.getNearbyEntities(playerLocation, 5, 5, 5)) {
             if (e instanceof LivingEntity) {
                 if (e != plr) {
-                    ((LivingEntity) e).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 60 * (secondMultiplier), 0));
+                    ((LivingEntity) e).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 30 * (secondMultiplier), 0));
                 }
             }
         }

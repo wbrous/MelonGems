@@ -33,6 +33,6 @@ public class HealingGem extends Gem {
     @Override
     protected void shiftClick(Player plr) {
         plr.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 1, level));
-        plr.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 60 * (secondMultiplier), level / 2));
+        plr.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 20 * (secondMultiplier), level / 2));
     }
 }

@@ -70,7 +70,7 @@ public class LavaGem extends Gem {
         LivingEntity blaze = (LivingEntity) plr.getWorld().spawnEntity(plr.getLocation(), EntityType.BLAZE);
         blaze.setCustomName(I18N.translate("OWNED_BLAZE").replace("{owner}", plr.getName()));
         blaze.setCustomNameVisible(true);
-        blaze.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 1200 * (secondMultiplier), level-1));
+        blaze.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 1200, level-1));
         AvoidTargetListener.getInstance().addToList(plr, blaze, 1200);
     }
 }

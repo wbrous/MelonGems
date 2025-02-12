@@ -28,9 +28,9 @@ public class StrengthGem extends Gem {
 
     @Override
     protected void rightClick(Player plr) {
-        plr.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 30 * (secondMultiplier), 1));
-        plr.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 30 * (secondMultiplier), 1));
-        plr.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 30 * (secondMultiplier), 1));
+        plr.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 10 * (secondMultiplier), 1));
+        plr.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 10 * (secondMultiplier), 1));
+        plr.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 15 * (secondMultiplier), 1));
     }
 
     @Override
@@ -51,7 +51,7 @@ public class StrengthGem extends Gem {
 
     @Override
     protected void shiftClick(Player plr) {
-        plr.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 10 * (secondMultiplier), 2));
+        plr.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 5 * (secondMultiplier), 2));
         new StrengthArena(plr).start();
     }
 }
