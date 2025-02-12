@@ -1,63 +1,63 @@
-name: PowerGems
+name: MelonGems
 version: '${project.version}'
-main: dev.iseal.powergems.PowerGems
+main: dev.gir0fa.melongems.PowerGems
 api-version: '1.19'
-author: ISeal
+author: Gir0fa
 load: STARTUP
 softdepend: [WorldGuard]
 commands:
   getallgems:
-    description: Command to give yourself all gem
+    description: Command to give yourself all gems
     usage: /getallgems
-    permission: powergems.getallgems
+    permission: melongems.getallgems
   givegem:
     description: Command to give yourself a gem
     usage: /givegem <gem>
-    permission: powergems.givegem
+    permission: melongems.givegem
   giveallgem:
     description: Command to give everyone a gem
     usage: /giveallgem <gem>
-    permission: powergems.giveallgem
+    permission: melongems.giveallgem
   checkupdates:
     description: Command to check for updates
     usage: /checkupdates
-    permission: powergems.checkupdates
+    permission: melongems.checkupdates
   reloadconfig:
     description: Command to reload the config files
     usage: /reloadconfig
     aliases: [rc]
-    permission: powergems.reloadconfig
+    permission: melongems.reloadconfig
   pgDebug:
     description: Debug command
     usage: /pgDebug
     aliases: [pgd, pgdb]
-    permission: powergems.debug
+    permission: melongems.debug
 permissions:
-    powergems.getallgems:
+    melongems.getallgems:
         description: Permission to use /getallgem
         default: op
-    powergems.givegem:
+    melongems.givegem:
         description: Permission to use /givegem
         default: op
-    powergems.giveallgem:
+    melongems.giveallgem:
         description: Permission to use /giveallgem
         default: op
-    powergems.checkupdates:
+    melongems.checkupdates:
         description: Permission to use /checkupdates
         default: op
-    powergems.reloadconfig:
+    melongems.reloadconfig:
         description: Permission to use /reloadconfig
         default: op
-    powergems.debug:
+    melongems.debug:
         description: Permission to use /debug
         default: op
-    powergems.*:
-        description: Permission to use all PowerGems commands
+    melongems.*:
+        description: Permission to use all melongems commands
         default: op
         children:
-            powergems.getallgems: true
-            powergems.givegem: true
-            powergems.giveallgem: true
-            powergems.checkupdates: true
-            powergems.reloadconfig: true
-            powergems.debug: true
+            melongems.getallgems: true
+            melongems.givegem: true
+            melongems.giveallgem: true
+            melongems.checkupdates: true
+            melongems.reloadconfig: true
+            melongems.debug: true
