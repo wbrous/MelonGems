@@ -1,7 +1,6 @@
 package dev.gir0fa.melongems.gems;
 
 import dev.gir0fa.melongems.misc.AbstractClasses.Gem;
-import dev.iseal.sealLib.Systems.I18N.I18N;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
@@ -20,7 +19,6 @@ public class LightningGem extends Gem {
     public LightningGem() {
         super("Lightning");
     }
-    private final int secondMultiplier = 20; // Don't question it.
 
     @Override
     public void call(Action act, Player plr, ItemStack item) {
@@ -56,9 +54,11 @@ public class LightningGem extends Gem {
         World world = playerLocation.getWorld();
         assert world != null;
         world.playSound(playerLocation, Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1.0f, 1.0f);
-        for (Entity e : world.getNearbyEntities(playerLocation, 5, 5, 5)) {
+        for (Entity e : world.getNearbyEntities(playerLocation, 4+level, 4+level, 4+level)) {
             if (e instanceof LivingEntity) {
                 if (e != plr) {
+                    // Don't question it.
+                    int secondMultiplier = 20;
                     ((LivingEntity) e).addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 30 * (secondMultiplier), 0));
                 }
             }

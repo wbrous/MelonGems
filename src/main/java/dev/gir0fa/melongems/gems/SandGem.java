@@ -135,14 +135,10 @@ public class SandGem extends Gem {
             }
         });
 
-        toReplace.forEach((block, material) -> {
-            block.setType(Material.SAND);
-        });
+        toReplace.forEach((block, material) -> block.setType(Material.SAND));
 
         sm.sandMoveListen.addToRemoveList(plr.getUniqueId(), toReplace);
 
-        Bukkit.getScheduler().runTaskLater(MelonGems.getPlugin(), () -> {
-            sm.sandMoveListen.removeFromList(plr.getUniqueId());
-        }, 50L*level);
+        Bukkit.getScheduler().runTaskLater(MelonGems.getPlugin(), () -> sm.sandMoveListen.removeFromList(plr.getUniqueId()), 50L*level);
     }
 }

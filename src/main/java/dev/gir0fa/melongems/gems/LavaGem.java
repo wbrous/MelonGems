@@ -24,7 +24,6 @@ public class LavaGem extends Gem {
     public LavaGem() {
         super("Lava");
     }
-    private final int secondMultiplier = 20; // Don't question it.
 
     private final Utils u = SingletonManager.getInstance().utils;
 
@@ -42,19 +41,10 @@ public class LavaGem extends Gem {
         while (times != 0) {
             ArrayList<Block> blocks = u.getSquareOutlineAirBlocks(plr, radius);
             // Set the blocks to lava
-            blocks.forEach(nullBlock -> {
-                nullBlock.setType(Material.LAVA);
-            });
+            blocks.forEach(nullBlock -> nullBlock.setType(Material.LAVA));
 
             // Set the blocks to air
-            Bukkit.getScheduler().scheduleSyncDelayedTask(MelonGems.getPlugin(), new Runnable() {
-                @Override
-                public void run() {
-                    blocks.forEach(nullBlock -> {
-                        nullBlock.setType(Material.AIR);
-                    });
-                }
-            }, 600 + (times * 20L));
+            Bukkit.getScheduler().scheduleSyncDelayedTask(MelonGems.getPlugin(), () -> blocks.forEach(nullBlock -> nullBlock.setType(Material.AIR)), 600 + (times * 20L));
             times--;
             radius = radius + 3;
         }
@@ -62,6 +52,8 @@ public class LavaGem extends Gem {
 
     @Override
     protected void leftClick(Player plr) {
+        // Don't question it.
+        int secondMultiplier = 20;
         plr.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 60 * (secondMultiplier), 0));
     }
 

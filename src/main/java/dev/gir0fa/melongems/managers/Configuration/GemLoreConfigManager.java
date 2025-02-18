@@ -35,7 +35,7 @@ public class GemLoreConfigManager extends AbstractConfigManager {
         lore.add(ChatColor.GREEN + "Abilities");
         switch (gemName) {
             case "Strength":
-                lore.add(ChatColor.WHITE + "Right click: Saturation, Strength and Resistance (all lvl 2)");
+                lore.add(ChatColor.WHITE + "Right click: Saturation (lvl 1+), Strength (lvl 2+), and Resistance (lvl 3+)");
                 lore.add(ChatColor.WHITE + "Shift click: An arena that keeps anyone from entering, useful to heal");
                 lore.add(ChatColor.WHITE + "Left click: A shockwave that sends everyone near flying and damages them");
             break;

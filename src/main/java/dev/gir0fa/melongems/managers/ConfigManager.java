@@ -122,6 +122,7 @@ public class ConfigManager implements Dumpable {
         return AbstractConfigManager.class.isAssignableFrom(clazz);
     }
 
+    @SuppressWarnings("unchecked")
     private void addConfigClass(Class<?> clazz) {
         if (isPossibleConfigClass(clazz)) {
             registeredConfigurations.add((Class<? extends AbstractConfigManager>) clazz);
