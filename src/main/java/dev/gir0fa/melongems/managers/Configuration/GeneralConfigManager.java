@@ -31,6 +31,7 @@ public class GeneralConfigManager extends AbstractConfigManager {
         file.setDefault("gemsHaveDescriptions", true);
         file.setDefault("explosionDamageAllowed", true);
         file.setDefault("preventGemPowerTampering", true);
+        file.setDefault("doGemLevelSteal", false);
         file.setDefault("doGemDecay", true);
         file.setDefault("doGemDecayOnLevel1", false);
         file.setDefault("dragonEggHalfCooldown", true);
@@ -87,6 +88,7 @@ public class GeneralConfigManager extends AbstractConfigManager {
     public boolean isAllowMetrics() {
         return file.getBoolean("allowMetrics");
     }
+    public boolean doGemSteal() {return file.getBoolean("doGemLevelSteal");}
     public boolean doGemDecay() {
         return file.getBoolean("doGemDecay");
     }

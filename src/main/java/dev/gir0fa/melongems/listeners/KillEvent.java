@@ -2,6 +2,7 @@ package dev.gir0fa.melongems.listeners;
 
 import dev.gir0fa.melongems.managers.NamespacedKeyManager;
 import dev.gir0fa.melongems.managers.SingletonManager;
+import dev.gir0fa.melongems.managers.Configuration.GeneralConfigManager;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
@@ -16,9 +17,12 @@ import java.util.Objects;
 public class KillEvent implements Listener {
 
     private final NamespacedKeyManager nkm = SingletonManager.getInstance().namespacedKeyManager;
+    private final GeneralConfigManager generalConfigManager = SingletonManager.getInstance().configManager.getRegisteredConfigInstance(GeneralConfigManager.class);
 
     @EventHandler
     public void onPlayerKill(PlayerDeathEvent e) {
+        if (!generalConfigManager.doGemSteal()) return;
+
         Player killer = e.getEntity().getKiller();
         if (killer == null) return;
 
