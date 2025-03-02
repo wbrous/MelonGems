@@ -6,7 +6,7 @@
 
     <groupId>dev.gir0fa</groupId>
     <artifactId>MelonGems</artifactId>
-    <version>3.6.0.4.1</version>
+    <version>3.6.0.4.beta</version>
     <packaging>jar</packaging>
 
     <name>PowerGems</name>
