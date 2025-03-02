@@ -113,9 +113,7 @@ public class GeneralConfigManager extends AbstractConfigManager {
     public boolean doGemDecayOnLevelOne() {
         return file.getBoolean("doGemDecayOnLevel1");
     }
-    public boolean isDebugMode() {
-        return file.getBoolean("debugMode");
-    }
+    public boolean isDebugMode() {return file.getBoolean("debugMode");}
     public boolean canRunUpdater() {
         return file.getBoolean("runUpdater");
     }

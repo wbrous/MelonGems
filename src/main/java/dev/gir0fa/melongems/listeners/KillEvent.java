@@ -12,8 +12,6 @@ import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.entity.Player;
 
-import java.util.Objects;
-
 public class KillEvent implements Listener {
 
     private final NamespacedKeyManager nkm = SingletonManager.getInstance().namespacedKeyManager;
