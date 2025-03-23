@@ -1,6 +1,6 @@
 # MelonGems 🍉💎  
 
-MelonGems is a fork of the original **PowerGems** plugin, customized specifically for our **Watermelon SMP**. This plugin enhances gameplay by introducing unique gem-based mechanics, providing players with powerful abilities and rewards.  
+MelonGems is a fork of the original [**PowerGems**](https://github.com/ISeal-plugin-developement/PowerGems) plugin, customized specifically for our **Watermelon SMP**. This plugin enhances gameplay by introducing unique gem-based mechanics, providing players with powerful abilities and rewards.  
 
 ## 🔧 Fixes & Improvements  
 While forking PowerGems, we addressed several issues to ensure a smoother experience:  
